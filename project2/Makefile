@@ -11,7 +11,7 @@
 LINK = g++
 
 # Turn on optimization and warnings:
-CFLAGS = -std=c++11 -Wall -O -g
+CFLAGS = -std=c++11 -Wall -g
 CXXFLAGS = $(CFLAGS)
 
 
