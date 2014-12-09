@@ -195,7 +195,7 @@ double area(point p[], int n)
 ////////////////////////////////////////////////////////////////////
 void check_args(int argc)
 {
-    if(argc != 3)
+    if(argc != 2)
     {
         cout << "Error: invalid number of arguments\nUsage: geometry  <inputFile>  <outputFile>" << endl;
         exit(1);
@@ -207,10 +207,10 @@ void check_args(int argc)
 //  the function. This function appends .in and .out to the input
 //  and output files before opening
 ////////////////////////////////////////////////////////////////////
-void open_files(ifstream &fin, ofstream &fout, char **argv)
+void open_files(ifstream &fin, ofstream &fout, char *argv)
 {
-    string infile = argv[1];
-    string outfile = argv[2];
+    string infile = argv;
+    string outfile = argv;
     
 
     //Open and check if input file exists
@@ -463,7 +463,7 @@ int main(int argc, char **argv)
     ofstream fout;
 
     //Open and check input and output files
-    open_files(fin, fout, argv);
+    open_files(fin, fout, argv[1]);
 
     minMax boundry;
 
